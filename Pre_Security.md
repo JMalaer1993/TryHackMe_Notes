@@ -10,7 +10,7 @@
  * NAT - Network Address Translation converts private IP addresses to public IP addresses and vice versa.
     + SNAT - Source Network Address Translation.
     + DNAT - Destination Network Address Translation.
- * PAT - Port Address Translation is a type of NAT the maps multiple private IP addresses to one public IP address using different ports.
+ * PAT - Port Address Translation is a type of NAT that maps multiple private IP addresses to one public IP address using different ports.
  * MAC (Media Access Control) Address - A permanent address assigned to a device on a network, like a fingerprint. Consists of 12 characters in hexadecimal format.
     + Spoofing - MAC addresses can be "spoofed." This is kind of like identity theft. This occurs when a device pretends to be another device by using its MAC address. One might spoof their MAC address to access resources available to other devices.
  * NIC - Network Interface Card. MAC addresses are assigned to the NIC on each device.
