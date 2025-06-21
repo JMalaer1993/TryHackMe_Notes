@@ -1,6 +1,6 @@
 # Network Fundamentals
  * Network - A network is just devices that are connected.
- * Internet - The internet is just a giant network made up of many tiny networks.
+ * Internet - The internet is just a giant network made up of many tiny networks. The aim of the internet is 
     + Private Networks - These tiny networks are called private networks.
     + Public Networks - The private networks are connected through public networks.
  * WWW - World Wide Web. Invented by Tim Berners-Lee in 1989.
@@ -28,3 +28,28 @@
  * Router - A router just routes data based on a routing table. You can think of routers like thousands of Tron style baseball players standing in an a massive field. Their job is to catch and throw the ball from baseball player to baseball player in the optimal path until the ball reaches its intended destination. If a player drops the ball, that's called a packet loss. There's balls contantly flying everywhere in every direction.
  * Subnetting - Dividing a network into smaller networks within itself. Devices on the same subnet can communicate directly with eachother, but devices on different subnets have to communicate through a router.
    + Subnet Mask - Each subnet is assigned a subnet mask which is an IP address used to identify that subnet.
+* ARP - Address Resolution Protocol. Turns a devices MAC address into an IP address within the network.
+   + ARP Request -
+   + ARP Reply -
+   + ARP Cashe -
+* DHCP - Dynamic Host Configuration Protocol. Assigns devices IP addresses.
+   + Discover
+   + Offer
+   + Request
+   + Acknowledge
+* Open Systems Interconnection (OSI) Model
+  1. Physical - Eternet cables.
+  2. Data Link - MAC addresses.
+  3. Network/Routing - IP addresses.
+      + OSPF - Open Shortest Path First.
+      + RIP - Routing Information Protocol.
+  4. Transport
+      + UDP - User Datagram Protocol
+      + TCP - Transmission Control Protocol
+  5. Session
+  6. Presentation - Encryption/decryption.
+  7. Application -
+     + DNS - Domain Name System.
+     + GUI - Graphical User Interface.
+#### As data travels through each of the OSI model layers, pieces of information are added. This is encapsualtion. It's like the data is being encapsulated with more and more information. Stripping this information away is known as decapsulation.
+  
