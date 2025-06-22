@@ -29,27 +29,33 @@
  * Subnetting - Dividing a network into smaller networks within itself. Devices on the same subnet can communicate directly with eachother, but devices on different subnets have to communicate through a router.
    + Subnet Mask - Each subnet is assigned a subnet mask which is an IP address used to identify that subnet.
 * ARP - Address Resolution Protocol. Turns a devices MAC address into an IP address within the network.
-   + ARP Request -
-   + ARP Reply -
-   + ARP Cashe -
+   + ARP Request
+   + ARP Reply
+   + ARP Cashe
 * DHCP - Dynamic Host Configuration Protocol. Assigns devices IP addresses.
    + Discover
    + Offer
    + Request
    + Acknowledge
-* Open Systems Interconnection (OSI) Model
-  1. Physical - Eternet cables.
-  2. Data Link - MAC addresses.
-  3. Network/Routing - IP addresses.
+## Open Systems Interconnection (OSI) Model
+  1. Physical - Ethernet.
+  2. Data Link
+      + Frames - No IP Address! Travel within the LAN.
+      + NIC - Network Interface Card.
+      + ARP - Adress Resolution Protocol.
+  3. Network/Routing
+      + Packets - IP Addresses! Travel the internet.
       + OSPF - Open Shortest Path First.
       + RIP - Routing Information Protocol.
   4. Transport
-      + UDP - User Datagram Protocol
-      + TCP - Transmission Control Protocol
+      + UDP - User Datagram Protocol.
+      + TCP - Transmission Control Protocol.
   5. Session
-  6. Presentation - Encryption/decryption.
-  7. Application -
+  6. Presentation
+      + Encryption
+      + Decryption
+  8. Application - The payload is born at this layer, and dies at this layer.
+     + HTTP and HTTPS
      + DNS - Domain Name System.
-     + GUI - Graphical User Interface.
-#### As data travels through each of the OSI model layers, pieces of information are added. This is encapsualtion. It's like the data is being encapsulated with more and more information. Stripping this information away is known as decapsulation.
-  
+     + GUI - Graphical User Interface. (not actually part of layer 7 but good to know)
+#### As data travels through each of the OSI model layers, pieces of information are added. This is encapsualtion. It's like the data is being encapsulated with more and more information. Stripping this information away is known as decapsulation. These terms are kind of misleading, because data travels in a single file line. When we encapsulate a payload, we are not actually wrapping data in layers of more information, but adding information to the front of the line (header) or back of the line (trailer). That being said, at layer 2, an ethernet header AND trailer are added at the same time, which actually literally does encapsulate the payload. However, most layers only add headers.
