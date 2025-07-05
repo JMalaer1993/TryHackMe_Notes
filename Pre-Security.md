@@ -96,3 +96,72 @@
     + Checksum
     + Flag
    #### It is worth comparing TCP/IP and UDP/IP. Both of them share a few of the same headers, such as the source/destination port/IP. One big difference is that TCP is stateful while UDP is stateless. This is just to say that TCP establishes a connection, while UDP does not. UDP just sends the data and hopes for the best. That is why TCP is much more reliable, but it is also much slow. So, both have their place.
+# How the Web Works
+## Domain Name System (DNS)
+#### DNS resolves user friendly words to IP addresses. That way, you can remember a name and not an IP address. Imagine having to know the IP address for the each server that hosts every website you want to visit.
+* Domain Hierarchy
+  + Root
+  + TLD - Top Level Domain.
+    - gTLD - Generic TLD.
+    - ccTLD - Country Code TLD.
+  + Second-Level
+  + Subdomain
+* DNS Record Types
+  + A - Resolves IPv4.
+  + AAAA - Resolves IPv6.
+  + CNAME - Resolves one domain name to anouther domain name.
+  + MX Record - Directs where to send email based on priority.
+  + TXT Record - Text based data.
+* DNS Request Process
+  1. When you request a domain name, your computer first checks its local DNS cache.
+  2. If the IP address isn’t there, it queries a recursive DNS resolver (usually provided by your ISP).
+  3. If the recursive resolver doesn't have the IP cached, it starts a DNS lookup by querying a root server, which responds with the address of the appropriate Top-Level Domain (TLD) server (e.g., .com, .org).
+  4. The recursive resolver then asks the TLD server, which replies with the address of the authoritative nameserver for that domain.
+  5. The recursive resolver then queries the authoritative nameserver, which provides the final IP address.
+  6. That IP is returned to your computer, and the recursive resolver caches it for future use.
+  7. Summary of all the servers involved in a DNS request:
+     + Recrusive
+     + Root
+     + TLD
+     + Authoritative Name Server
+#### Its also worth noting that DNS records stored in cache have a TTL. That way, you're not using an old record that was updated a long time ago. After the TTL, the record goes "stale."
+## Hypertext Transfer Protocol (HTTP)
+#### HTTP Refers to the set of rules used when communicating with web servers to transmit webpage data.
+* Tim-Berners Lee - Created HTTP around 1990.
+* HTTPS - The secure version of HTTP. Provides encryption of data and verification that you are talking to the correct web server, rather than a malicious server.
+* URL - Uniform Resource Locator. As that name sugest, a URL, which you type into a webpage, is basically an instruction of how and where to request resources on the internet. A URL is made up of a few parts:
+  + Scheme
+  + User
+  + Host
+  + Port
+  + Path
+  + Query String
+  + Fragment
+* HTTP Methods
+  + GET - Get information from the web server.
+  + POST - Submit new information to the web server.
+  + PUT - Update existing information.
+  + DELETE - Deletes information from a web server.
+* Common HTTP Status Codes
+  + 200 - OK
+  + 201 - Created
+  + 301 - Moved Permanently
+  + 302 - Found
+  + 400 - Bad Request
+  + 401 - Not Authorized
+  + 403 - Forbidden
+  + 404 - Page Not Found
+  + 405 - Method Not Allowed
+  + 500 - Internal Service Error
+  + 503 - Service Unavailable
+* HTTP Request Headers
+  + Host
+  + User-Agent
+  + Content-Length
+  + Accept-Encoding
+  + Cookies
+* HTTP Response Headers
+  + Set-Cookie
+  + Cache-Control
+  + Content-Type
+  + Content-Encoding
