@@ -165,3 +165,27 @@
   + Cache-Control
   + Content-Type
   + Content-Encoding
+## Websites
+* Front End - The website rendered by your browser.
+* Back End - The web server.
+* HTML - Hypertext Markup Language. This is the language websites are written in. Defines the structure of a website.
+* JS - JavaScript. The coding language that allows webpages to be interactive and dynamic.
+* HTML Injection
+## Other Components
+* Load Balancers - Determines which server to use based on demand.
+  - Round Robbin
+  - Weighted
+  - Health Check - Load balancers also turn checkups on servers to make sure they're running correctly.
+* CDN - Content Delivery Network.
+* DataBases
+* WAF - Web Application Firewall.
+* Web Servers - Deliver web content (HTML, images, scripts) over HTTP/HTTPS.
+  + Virtual Hosts - Multiple websites on one IP, separated by domain name.
+  + Static Hosts - Serve unchanging files.
+  + Dynamic Hosts - Content is generated on the fly using scripts.
+  + Languages
+    - PHP - Hypertext Preprocessor. Used for GET, POST, PUT, and DELETE requests.
+    - Python
+    - Ruby
+    - Perl
+
